@@ -4,14 +4,16 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import files
 
-app = FastAPI(title="DXF Processor API")
+app = FastAPI()
 
-# CORS: ajusta tu dominio de Vercel
-origins = ["https://back-mc.onrender.com"]
+origins = [
+    "http://localhost:5173",   # para desarrollo
+    "https://metalcortes.vercel.app",  # tu dominio en producción
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins,  # en pruebas puedes usar ["*"], pero mejor especificar
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
