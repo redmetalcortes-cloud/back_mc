@@ -19,6 +19,7 @@ pip-wheel-metadata/
 
 # Entornos/variables
 .env
+.secrets/
 .env.*
 .envrc
 
