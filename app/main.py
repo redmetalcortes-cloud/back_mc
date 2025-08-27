@@ -7,9 +7,8 @@ from app.routers import files
 app = FastAPI(title="DXF Processor API")
 
 # CORS: ajusta tu dominio de Vercel
-origins = [
-    "http://localhost:5173",
-]
+origins = ["https://back-mc.onrender.com"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
