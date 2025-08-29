@@ -8,7 +8,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:5173",   # para desarrollo
-    "https://metalcortes.vercel.app",  # tu dominio en producción
+    "https://metalcortes.vercel.app",
+    "https://www.metalcortes.vercel.app",  # tu dominio en producción
 ]
 
 app.add_middleware(
